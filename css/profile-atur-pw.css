@@ -1,0 +1,44 @@
+.kotak a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.atur-pw {
+  border-bottom: 2px solid black;
+}
+
+.logout {
+  margin-top: 5px;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    max-width: 165px;
+  }
+
+  .pw {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .btn {
+    max-width: 220px;
+  }
+  .pw {
+    min-width: 490px;
+    margin-bottom: 16rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btn {
+    min-width: 255px;
+  }
+  .pw {
+    width: 570px;
+    height: 350px;
+  }
+}

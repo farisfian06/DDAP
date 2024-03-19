@@ -1,0 +1,59 @@
+.nama h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nama i {
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.no-izin h5 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.poin {
+  font-weight: 600;
+  background-color: #a2f6db;
+  color: #034832;
+  border-radius: 10px;
+  padding: 0 16px;
+}
+
+.hari {
+  width: 100%;
+}
+
+.jam-btn {
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.jam-btn .col-3 {
+  border-radius: 10px;
+  color: #034832;
+  text-align: center;
+  height: 38px;
+  background-color: #a2f6db;
+}
+
+.jam-btn label {
+  width: 100%;
+}
+
+.jam p {
+  font-weight: bold;
+}
+
+.hari p {
+  background-color: #a2f6db;
+  border-radius: 10px;
+}
+
+@media (min-width: 576px) {
+  .poin p {
+    padding: 5px 7px;
+  }
+}

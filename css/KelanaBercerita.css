@@ -1,0 +1,91 @@
+.profile {
+  min-width: 50px;
+  height: 60px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .profile {
+    min-width: 90px;
+    height: 110px;
+  }
+
+  #send {
+    margin-right: 1em;
+  }
+}
+
+.input-group {
+  align-items: center;
+}
+
+#send-btn {
+  margin-left: -4.5em;
+  margin-right: 1em;
+}
+
+#send {
+  margin-left: -2.7em;
+}
+
+.border-gray {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+.comment {
+  background-color: #d8e7e2;
+  padding: 15px;
+}
+
+.post {
+  background-color: #e8fdf6;
+  border-radius: 20px;
+}
+
+.teks {
+  width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5em;
+  height: 1.3em;
+  margin: 0 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 1em;
+  width: 1em;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+input:checked + .slider {
+  background-color: #888888;
+}
+
+input:checked + .slider::before {
+  transform: translateX(16px);
+}

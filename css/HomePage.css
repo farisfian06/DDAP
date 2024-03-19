@@ -1,0 +1,216 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  position: relative;
+  margin-top: 30px;
+  height: 530px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #10a273 0%, #17e8a29a 100%);
+}
+
+.hero-image {
+  position: absolute;
+  object-fit: cover;
+  left: 0;
+  bottom: 0;
+}
+
+.vec2 {
+  position: absolute;
+
+  right: 0;
+  bottom: 2em;
+}
+
+.vec3 {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+}
+
+.warna {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #10a273 0%, #17e8a29a 100%);
+
+  opacity: 1;
+}
+
+.content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.fitur {
+  background-image: linear-gradient(
+    180deg,
+    #5defbf 0%,
+    #8661c142 70%,
+    white 100%
+  );
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 30%);
+  padding: 30px 0;
+  border-radius: 30px;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.teks-kiri,
+.teks-kanan {
+  margin-top: 30px;
+}
+
+.tks h4 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.tks p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.tombol a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .content h1 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .img-wrapper {
+    min-width: 150px;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .tombol {
+    max-height: 3rem;
+    max-width: 170px;
+  }
+
+  .hero-image {
+    max-height: 230px;
+    width: auto;
+  }
+
+  .vec2 {
+    max-width: 66px;
+    height: auto;
+  }
+
+  .vec3 {
+    max-width: 150px;
+    height: auto;
+    right: 0;
+  }
+}
+
+@media (min-width: 767px) {
+  .content {
+    top: 40%;
+  }
+
+  .content h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .hero-image {
+    max-height: 340px;
+    width: auto;
+  }
+  .vec2 {
+    max-width: 90px;
+    height: auto;
+  }
+
+  .vec3 {
+    max-width: 200px;
+    right: 0;
+  }
+
+  .tombol {
+    max-width: 250px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    top: 50%;
+  }
+  .content h1 {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .content p {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .hero-image {
+    min-height: 510px;
+  }
+
+  .vec2 {
+    min-width: 183px;
+    height: auto;
+  }
+
+  .vec3 {
+    min-width: 399px;
+    right: 0;
+  }
+
+  .judul {
+    margin-left: 7rem;
+  }
+  .fitur {
+    max-width: 1100px;
+  }
+
+  .img-wrapper {
+    min-width: 300px;
+    height: auto;
+  }
+  .teks-kiri {
+    padding-left: 50px;
+  }
+
+  .teks-kanan {
+    padding-right: 50px;
+  }
+
+  .tombol {
+    max-width: 300px;
+    margin-top: 60px;
+  }
+}

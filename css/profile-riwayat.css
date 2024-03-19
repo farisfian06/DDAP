@@ -1,0 +1,95 @@
+.kotak a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+.riwayat {
+  border-bottom: 2px solid black;
+}
+
+.atur-pw {
+  margin-top: 5px;
+}
+
+.profile {
+  background-color: #e8fdf6;
+}
+
+.status {
+  background-color: #fff;
+  border: 3px solid #e8a417;
+  color: #e8a417;
+  padding: 8px;
+  height: 2.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.status-done {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #17e8a4;
+  color: #17e8a4;
+  padding: 8px;
+  height: 2.5rem;
+  font-weight: 600;
+}
+
+.atas {
+  border-bottom: 2px solid black;
+}
+
+.atas span {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.atas h5 {
+  font-weight: 400;
+}
+
+.bawah h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+.bawah p {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.wrapper img {
+  width: 70px;
+  max-height: 71px;
+  object-fit: cover;
+}
+
+.wrapper {
+  gap: 10px;
+}
+
+.ulasan {
+  background-color: #e8a417;
+  color: white;
+  padding: 0.5rem 3rem;
+  border-radius: 10px;
+}
+
+.chat-btn {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .identitas h3,
+  h4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
