@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kelana Bercerita - Kelana Kampus</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/KelanaBercerita.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #fff"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="home-page.html">
+          <img
+            src="img/logo-kelana-kampus.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+          <span style="color: #17e8a4">Kelana</span
+          ><span style="color: #a417e8">Kampus</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-semibold">
+            <a class="nav-link" href="konseling.html">Konseling</a>
+            <a class="nav-link" href="teman-kelana.html">Teman Kelana</a>
+            <a class="nav-link" href="kelana-bercerita.html"
+              >Kelana Bercerita</a
+            >
+            <a class="nav-link" href="kelana-belajar.html">Kelana Belajar</a>
+            <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+            <a class="nav-link" href="akun-sign-in.html">Akun</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="d-flex flex-nowrap p-3 align-items-center">
+              <img class="profile" src="img/celvin.jpeg" alt="" />
+
+              <input
+                type="text"
+                id="ceritaInput"
+                class="form-control border-gray text-start mx-3"
+                style="border-radius: 5px; width: 100%; height: 3rem"
+                placeholder="Bagikan Ceritamu"
+              />
+              <button id="send-btn" class="btn" onclick="bagikanCerita()">
+                <img src="img/SendFill.svg" alt="" />
+              </button>
+              <div
+                class="d-flex flex-column align-items-center justify-content-between"
+              >
+                <p style="padding-top: 0.5em">Anonim?</p>
+                <label class="switch">
+                  <input type="checkbox" id="anonim" name="anon" checked />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div id="postinganCerita">
+              <div class="post container d-flex pt-4 px-4">
+                <img class="profile" src="img/nunung.jpeg" alt="" />
+                <div class="teks px-2 px-md-4">
+                  <h4>Nunung</h4>
+                  <h6>
+                    Semua orang main Mobile Legend, kayak gaada kegiatan lain
+                    aja bang. Nongkrong kok maen ML huft. Udah tau temennya
+                    sedih, ga diajak ngobrol, dahlah cari sirkel baru aja.
+                  </h6>
+                  <p class="text-muted">00:30 - 20 November, 2023</p>
+                  <div class="d-flex justify-content-between">
+                    <button
+                      type="button"
+                      class="btn text-center"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#post"
+                      aria-expanded="false"
+                      aria-controls="post"
+                    >
+                      <i class="bi bi-chat-right"> 3 Komentar</i>
+                    </button>
+                    <h5 class="text-center">2 Suporter</h5>
+                    <a
+                      class="btn tombol-dukung px-0 py-0 text-end"
+                      style="background-color: #00000033; height: 100%"
+                    >
+                      <i class="bi bi-heart-fill">Dukung</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse container px-2 comment" id="post">
+                <div id="commentPost1">
+                  <div class="comment d-flex py-2">
+                    <img class="profile" src="img/bambang.jpeg" alt="" />
+                    <div class="teks px-2">
+                      <h4>Bambang</h4>
+                      <h6>Eh tapi ngapain lagi kalo nongkrong ga maen ML</h6>
+                      <p class="text-muted">15:30 - 4 November, 2023</p>
+                    </div>
+                  </div>
+                  <div class="comment d-flex py-2">
+                    <img class="profile" src="img/nunung.jpeg" alt="" />
+                    <div class="teks px-2">
+                      <h4>Nunung</h4>
+                      <h6>
+                        ya kan banyak bisa ngobrol kek, main bareng kek, emang
+                        semua cowo otaknya ML terus gaasik bener
+                      </h6>
+                      <p class="text-muted">15:45 - 4 November, 2023</p>
+                    </div>
+                  </div>
+                  <div class="comment d-flex py-2">
+                    <img class="profile" src="img/icak.jpeg" alt="" />
+                    <div class="teks px-2">
+                      <h4>Icak</h4>
+                      <h6>
+                        setuju banget nder, ini juga keresahanku kalo main sama
+                        temen temen cowo. Emang mereka suka asik sendiri, kita
+                        yang cewe jadi kesel sendiri
+                      </h6>
+                      <p class="text-muted py-2">10:00 - 5 November, 2023</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment d-flex py-2 align-items-center">
+                  <img class="profile" src="img/celvin.jpeg" alt="" />
+                  <div class="teks" style="width: 90%">
+                    <input
+                      class="border-gray text-gray-dark bg-light ms-2 ms-md-3 ps-2 text-start"
+                      id="komentarInput1"
+                      type="text"
+                      placeholder="Tulis Komentar"
+                      style="min-width: 100%; border-radius: 10px; height: 3em"
+                    />
+                  </div>
+                  <button
+                    id="send"
+                    class="btn"
+                    onclick="bagikanKomentar('komentarInput1', 'commentPost1','anon1')"
+                  >
+                    <img src="img/SendFill.svg" alt="" />
+                  </button>
+                  <div
+                    class="d-flex flex-column align-items-center justify-content-between"
+                  >
+                    <p style="padding-top: 0.5em">Anonim?</p>
+                    <label class="switch">
+                      <input type="checkbox" id="anon1" checked />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="post container d-flex pt-4 px-4 mt-4">
+                <img class="profile" src="img/bambang.jpeg" alt="" />
+                <div class="teks px-2 px-md-4">
+                  <h4>Bambang</h4>
+                  <h6>
+                    Pengen banget punya circle yang bisa ngobrolin tentang
+                    visi-misi hidup, ambisi karir, atau sekedar ngomongin
+                    tantangan hidup sebagai mahasiswa rantau. Rasanya kayak di
+                    lingkaran setan aja, susah banget cari temen yang mau
+                    dengerin curhatan atau sharing ide yang lebih dalam.
+                  </h6>
+                  <p class="text-muted">15:30 - 20 November, 2023</p>
+                  <div class="d-flex justify-content-between">
+                    <button
+                      type="button"
+                      class="btn text-center"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#post2"
+                      aria-expanded="false"
+                      aria-controls="post2"
+                    >
+                      <i class="bi bi-chat-right"> 0 Komentar</i>
+                    </button>
+                    <h5 class="text-center">4 Suporter</h5>
+                    <a
+                      class="btn tombol-dukung px-0 py-0 text-end"
+                      style="background-color: #00000033; height: 100%"
+                    >
+                      <i class="bi bi-heart-fill">Dukung</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse container px-2 comment" id="post2">
+                <div id="commentPost2"></div>
+                <div class="comment d-flex py-2 align-items-center">
+                  <img class="profile" src="img/celvin.jpeg" alt="" />
+                  <div class="teks" style="width: 90%">
+                    <input
+                      class="border-gray text-gray-dark bg-light ms-2 ms-md-3 ps-2 text-start"
+                      id="komentarInput2"
+                      type="text"
+                      placeholder="Tulis Komentar"
+                      style="min-width: 100%; border-radius: 10px; height: 3em"
+                    />
+                  </div>
+                  <button
+                    id="send"
+                    class="btn"
+                    onclick="bagikanKomentar('komentarInput2', 'commentPost2','anon2')"
+                  >
+                    <img src="img/SendFill.svg" alt="" />
+                  </button>
+                  <div
+                    class="d-flex flex-column align-items-center justify-content-between"
+                  >
+                    <p style="padding-top: 0.5em">Anonim?</p>
+                    <label class="switch">
+                      <input type="checkbox" id="anon2" checked />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="post container d-flex pt-4 px-4 mt-4">
+                <img class="profile" src="img/icak.jpeg" alt="" />
+                <div class="teks px-2 px-md-4">
+                  <h4>Icak</h4>
+                  <h6>
+                    Sulit banget nemu temen yang bisa diajak ngobrol atau ngajak
+                    ngopi bareng. Padahal udah beberapa kali liat temen-temen
+                    yang keliatannya asik di kelas, tapi gimana ya, kayaknya
+                    mereka udah punya sirkel sendiri. Nggak tau harus gimana
+                    lagi, kadang rasanya bosen banget sendirian di kampus ini.
+                  </h6>
+                  <p class="text-muted">15:50 - 20 November, 2023</p>
+                  <div class="d-flex justify-content-between">
+                    <button
+                      type="button"
+                      class="btn text-center"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#post3"
+                      aria-expanded="false"
+                      aria-controls="post3"
+                    >
+                      <i class="bi bi-chat-right"> 0 Komentar</i>
+                    </button>
+                    <h5 class="text-center">2 Suporter</h5>
+                    <a
+                      class="btn tombol-dukung px-0 py-0 text-end"
+                      style="background-color: #00000033; height: 100%"
+                    >
+                      <i class="bi bi-heart-fill">Dukung</i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse container px-2 comment" id="post3">
+                <div id="commentPost3"></div>
+                <div class="comment d-flex py-2 align-items-center">
+                  <img class="profile" src="img/celvin.jpeg" alt="" />
+                  <div class="teks" style="width: 90%">
+                    <input
+                      class="border-gray text-gray-dark bg-light ms-2 ms-md-3 ps-2 text-start"
+                      id="komentarInput3"
+                      type="text"
+                      placeholder="Tulis Komentar"
+                      style="min-width: 100%; border-radius: 10px; height: 3em"
+                    />
+                  </div>
+                  <button
+                    id="send"
+                    class="btn"
+                    onclick="bagikanKomentar('komentarInput3', 'commentPost3','anon3')"
+                  >
+                    <img src="img/SendFill.svg" alt="slaksak" />
+                  </button>
+                  <div
+                    class="d-flex flex-column align-items-center justify-content-between"
+                  >
+                    <p style="padding-top: 0.5em">Anonim?</p>
+                    <label class="switch">
+                      <input type="checkbox" id="anon3" checked />
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container py-5" style="margin-top: 5rem">
+        <div class="row">
+          <div class="col-lg-6 col-md-4">
+            <p class="fw-bold fs-3">
+              <img
+                src="img/logo-kelana-kampus.png"
+                alt="Logo"
+                width="50"
+                height="40"
+                class="d-inline-block align-text-top"
+              />
+              <span style="color: #17e8a4">Kelana</span
+              ><span style="color: #a417e8">Kampus</span>
+            </p>
+            <p>
+              Fakultas Ilmu Komputer, Universitas Brawijaya, Kota Malang 65145
+            </p>
+            <p class="fw-semibold fs-4">
+              “Buka Hati dan Pikiran, Temukan Ketenangan”
+            </p>
+          </div>
+          <div class="col-lg-2 offset-lg-2 col-md-4 offset-md-1">
+            <div class="footer">
+              <p class="fw-semibold">Layanan</p>
+              <ul class="list-unstyled">
+                <li><a href="konseling.html">Konseling</a></li>
+                <li>
+                  <a href="teman-kelana.html">Teman Kelana</a>
+                </li>
+                <li>
+                  <a href="kelana-bercerita.html">Kelana Bercerita</a>
+                </li>
+                <li>
+                  <a href="kelana-belajar.html">Kelana Belajar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3">
+            <div class="footer">
+              <p class="fw-semibold">Hubungi Kami</p>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-tiktok"></i> Tiktok</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-whatsapp"></i> whatsapp</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+        if (!isLoggedIn) {
+          window.location.href = "akun-sign-in.html";
+        }
+      });
+
+      function bagikanCerita() {
+        var ceritaInput = document.getElementById("ceritaInput");
+        var ceritaText = ceritaInput.value.trim();
+        var anonim = document.getElementById("anonim");
+
+        if (ceritaText !== "") {
+          var postinganCerita = document.getElementById("postinganCerita");
+
+          // Buat elemen div untuk postingan cerita
+          var postinganElement = document.createElement("div");
+          postinganElement.className = "post container d-flex pt-4 px-4 mt-4";
+
+          // Tambahkan foto profil
+          var profileImage = document.createElement("img");
+          if (anonim.checked) {
+            profileImage.src = "img/blank-profile.png";
+            profileImage.alt = "Profile";
+            profileImage.className = "profile";
+          } else {
+            profileImage.src = "img/celvin.jpeg";
+            profileImage.alt = "Profile";
+            profileImage.className = "profile";
+          }
+          postinganElement.appendChild(profileImage);
+
+          // Tambahkan teks cerita
+          var textElement = document.createElement("div");
+          textElement.className = "teks px-2 px-md-4";
+          var nama = document.createElement("h4");
+          if (anonim.checked) {
+            nama.innerText = "C***";
+          } else {
+            nama.innerText = "Celv";
+          }
+          var isiPost = document.createElement("h6");
+          isiPost.innerText = ceritaText;
+          var waktu = document.createElement("p");
+          waktu.className = "text-muted";
+          waktu.innerText = "23:59 - 10 Desember, 2023";
+          var commentBtn = document.createElement("div");
+          commentBtn.className = "d-flex justify-content-between";
+          commentBtn.innerHTML =
+            '<button type="button" class="btn text-center" data-bs-toggle="collapse" data-bs-target="#post4" aria-expanded="false" aria-controls="post4"> <i class="bi bi-chat-right"> 0 Komentar</i> </button> <h5 class="text-center">0 Suporter</h5> <a class="btn tombol-dukung px-0 py-0 text-end" style="background-color: #00000033; height: 100%"> <i class="bi bi-heart-fill">Dukung</i> </a>';
+          textElement.appendChild(nama);
+          textElement.appendChild(isiPost);
+          textElement.appendChild(waktu);
+          textElement.appendChild(commentBtn);
+          postinganElement.appendChild(textElement);
+
+          // Tambahkan postingan ke container postingan cerita
+          postinganCerita.appendChild(postinganElement);
+
+          //elemen komentar
+          var commentPostingan = document.createElement("div");
+          commentPostingan.className = "collapse container px-2 comment";
+          commentPostingan.id = "post4";
+
+          //tempat komentar
+          var commentPost = document.createElement("div");
+          commentPost.id = "commentPost4";
+          var commentELement = document.createElement("div");
+          commentELement.className = "comment d-flex py-2 align-items-center";
+          commentELement.innerHTML =
+            '<img class="profile" src="img/celvin.jpeg" alt="" /> <div class="teks" style="width: 90%"> <input class="border-gray text-gray-dark bg-light ms-2 ms-md-3 ps-2 text-start" id="komentarInput4" type="text" placeholder="Tulis Komentar" style="min-width: 100%; border-radius: 10px" /></div> ';
+          var submitBtn = document.createElement("button");
+          submitBtn.id = "send";
+          submitBtn.className = "btn";
+          submitBtn.innerHTML = '<img src="img/SendFill.svg" alt="" />';
+          var anonimCheck = document.createElement("div");
+          anonimCheck.className =
+            "d-flex flex-column align-items-center justify-content-between";
+          anonimCheck.innerHTML =
+            '<p style="padding-top: 0.5em">Anonim?</p> <label class="switch"> <input type="checkbox" id="anon3" checked /> <span class="slider"></span> </label> ';
+          commentELement.appendChild(submitBtn);
+          commentELement.appendChild(anonimCheck);
+          commentPostingan.appendChild(commentPost);
+          commentPostingan.appendChild(commentELement);
+
+          // Menambahkan tempat komen
+          postinganCerita.appendChild(commentPostingan);
+
+          // Bersihkan input setelah mengirim postingan
+          ceritaInput.value = "";
+        }
+      }
+
+      function bagikanKomentar(idKomentar, idCommentPost, idAnonim) {
+        var komenInput = document.getElementById(idKomentar);
+        var komenText = komenInput.value.trim();
+        var anonim = document.getElementById(idAnonim);
+
+        if (komenText !== "") {
+          var postinganCerita = document.getElementById(idCommentPost);
+
+          // Buat elemen div untuk postingan cerita
+          var postinganElement = document.createElement("div");
+          postinganElement.className = "comment d-flex py-2";
+
+          // Tambahkan foto profil (ganti 'path/to/profile.jpg' dengan path foto profil)
+          var profileImage = document.createElement("img");
+          if (anonim.checked) {
+            profileImage.src = "img/blank-profile.png";
+            profileImage.alt = "Profile";
+            profileImage.className = "profile";
+          } else {
+            profileImage.src = "img/celvin.jpeg";
+            profileImage.alt = "Profile";
+            profileImage.className = "profile";
+          }
+          postinganElement.appendChild(profileImage);
+
+          // Tambahkan teks komen
+          var textElement = document.createElement("div");
+          textElement.className = "teks px-2";
+          var nama = document.createElement("h4");
+          if (anonim.checked) {
+            nama.innerText = "C***";
+          } else {
+            nama.innerText = "Celv";
+          }
+          var isiKomentar = document.createElement("h6");
+          isiKomentar.innerText = komenText;
+          var waktu = document.createElement("p");
+          waktu.className = "text-muted py-2";
+          waktu.innerText = "23:59 - 10 Desember, 2023";
+          textElement.appendChild(nama);
+          textElement.appendChild(isiKomentar);
+          textElement.appendChild(waktu);
+          postinganElement.appendChild(textElement);
+
+          // Tambahkan komentar ke jendela postingan
+          postinganCerita.appendChild(postinganElement);
+
+          // Membersihkan input setelah mengirim postingan
+          komenInput.value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

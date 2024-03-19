@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile - Kelana Kampus</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/profile-riwayat.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      style="background-color: #fff"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="home-page.html">
+          <img
+            src="img/logo-kelana-kampus.png"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="d-inline-block align-text-top"
+          />
+          <span style="color: #17e8a4">Kelana</span
+          ><span style="color: #a417e8">Kampus</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto fw-semibold">
+            <a class="nav-link" href="konseling.html">Konseling</a>
+            <a class="nav-link" href="teman-kelana.html">Teman Kelana</a>
+            <a class="nav-link" href="kelana-bercerita.html"
+              >Kelana Bercerita</a
+            >
+            <a class="nav-link" href="kelana-belajar.html">Kelana Belajar</a>
+            <a class="nav-link" href="tentang-kami.html">Tentang Kami</a>
+            <a class="nav-link" href="profile.html">Akun</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3">
+            <div class="card rounded-4" style="background-color: #e8fdf6">
+              <div class="container p-4 kotak">
+                <div class="profil">
+                  <a href="profile.html">Profil saya</a>
+                </div>
+                <div class="riwayat mt-3">
+                  <a href="profile-riwayat.html">Riwayat transaksi</a>
+                </div>
+                <div class="atur-pw mt-3">
+                  <a href="profile-atur-pw.html">Atur ulang password</a>
+                </div>
+                <div class="logout mt-3">
+                  <a href="#" onclick="logout()">Logout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-9 mt-4 mt-md-0">
+            <h2>Riwayat Transaksi</h2>
+            <div class="card rounded-4 p-4" style="background-color: #e8fdf6">
+              <div class="card transaksi" style="background-color: #a2f6db">
+                <div class="container p-4">
+                  <div class="d-flex justify-content-between atas">
+                    <div class="tanggal">
+                      <h5>
+                        <span>Konseling online</span> <br />10 Desember 2023
+                      </h5>
+                    </div>
+                    <div class="status">Proses</div>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap align-items-center mt-3 bawah"
+                    style="gap: 1rem"
+                  >
+                    <div class="wrapper d-flex">
+                      <img src="img/profile-psikolog.png" alt="" />
+                      <div class="nama">
+                        <h3>Adrian Pratama, M.Psi</h3>
+                        <p>Rp269.000</p>
+                      </div>
+                    </div>
+                    <a
+                      href="konseling-chat.html"
+                      class="chat-btn align-self-end ms-auto"
+                    >
+                      <button type="button" class="btn text-center ulasan">
+                        Mulai chat
+                      </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card transaksi mt-4"
+                style="background-color: #a2f6db"
+              >
+                <div class="container p-4">
+                  <div class="d-flex flex-wrap justify-content-between atas">
+                    <div class="tanggal">
+                      <h5>
+                        <span>Konseling online</span> <br />04 Desember 2023
+                      </h5>
+                    </div>
+                    <div class="status-done">Selesai</div>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap align-items-center mt-3 bawah"
+                    style="gap: 1rem"
+                  >
+                    <div class="wrapper d-flex">
+                      <img src="img/profile-psikolog2.png" alt="" />
+                      <div class="nama">
+                        <h3>Anisa Putri Utami, M.Psi</h3>
+                        <p>Rp149.000</p>
+                      </div>
+                    </div>
+                    <button
+                      class="btn text-center ulasan align-self-end ms-auto"
+                    >
+                      Beri ulasan
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card transaksi mt-4"
+                style="background-color: #a2f6db"
+              >
+                <div class="container p-4">
+                  <div class="d-flex justify-content-between atas">
+                    <div class="tanggal">
+                      <h5>
+                        <span>Konseling online</span> <br />02 Desember 2023
+                      </h5>
+                    </div>
+                    <div class="status-done">Selesai</div>
+                  </div>
+                  <div
+                    class="d-flex flex-wrap align-items-center mt-3 bawah"
+                    style="gap: 1rem"
+                  >
+                    <div class="wrapper d-flex">
+                      <img src="img/profile-psikolog3.png" alt="" />
+                      <div class="nama">
+                        <h3>Maya Safitri, M.Psi</h3>
+                        <p>Rp159.000</p>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn text-center ulasan align-self-end ms-auto"
+                    >
+                      Beri ulasan
+                    </button>
+                    <!-- <div class="ulasan align-self-end">Beri Ulasan</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container py-5" style="margin-top: 5rem">
+        <div class="row">
+          <div class="col-lg-6 col-md-4">
+            <p class="fw-bold fs-3">
+              <img
+                src="img/logo-kelana-kampus.png"
+                alt="Logo"
+                width="50"
+                height="40"
+                class="d-inline-block align-text-top"
+              />
+              <span style="color: #17e8a4">Kelana</span
+              ><span style="color: #a417e8">Kampus</span>
+            </p>
+            <p>
+              Fakultas Ilmu Komputer, Universitas Brawijaya, Kota Malang 65145
+            </p>
+            <p class="fw-semibold fs-4">
+              “Buka Hati dan Pikiran, Temukan Ketenangan”
+            </p>
+          </div>
+          <div class="col-lg-2 offset-lg-2 col-md-4 offset-md-1">
+            <div class="footer">
+              <p class="fw-semibold">Layanan</p>
+              <ul class="list-unstyled">
+                <li><a href="konseling.html">Konseling</a></li>
+                <li>
+                  <a href="teman-kelana.html">Teman Kelana</a>
+                </li>
+                <li>
+                  <a href="kelana-bercerita.html">Kelana Bercerita</a>
+                </li>
+                <li>
+                  <a href="kelana-belajar.html">Kelana Belajar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3">
+            <div class="footer">
+              <p class="fw-semibold">Hubungi Kami</p>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#"><i class="bi bi-instagram"></i> Instagram</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-tiktok"></i> Tiktok</a>
+                </li>
+                <li>
+                  <a href="#"><i class="bi bi-whatsapp"></i> whatsapp</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <script>
+      function logout() {
+        localStorage.removeItem("isLoggedIn");
+        window.location.href = "home-page.html";
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
